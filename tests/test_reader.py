@@ -2,8 +2,8 @@ import os
 import pytest
 
 from dataclasses import asdict
-from ray.reader import Reader
-from ray.models import Stats, TeamStats
+from src.reader import Reader
+from src.models import Stats, TeamStats
 
 def test_season8():
     filename = os.path.join(os.path.dirname(__file__), 'Replays/season08-2019.04.05.replay')

@@ -1,26 +1,13 @@
-# Ray - Go 86 em
+# Fortnite Replay Parser
 
-[![Build Status](https://travis-ci.org/Shiqan/fortnite-replay-reader.svg?branch=master)](https://travis-ci.org/Shiqan/fortnite-replay-reader)
-[![Coverage Status](https://coveralls.io/repos/github/Shiqan/fortnite-replay-reader/badge.svg?branch=develop)](https://coveralls.io/github/Shiqan/fortnite-replay-reader?branch=develop)
-[![PyPI](https://img.shields.io/pypi/v/fortnite-replay-reader.svg)](https://pypi.org/project/fortnite-replay-reader/)
-[![BCH compliance](https://bettercodehub.com/edge/badge/Shiqan/fortnite-replay-reader?branch=develop)](https://bettercodehub.com/)
+WIP library intended to parse Fortnite replay files up to Chapter 4 Season 1 with backwards compatibility for earlier versions.
 
-Fortnites favorite assistent is here to help you parse replay files.
+## Example Usage
 
-```python
-from ray import Reader
+* Coming soon!
 
-with Reader("filepath") as replay:
-    print(replay.stats)
-    print(replay.team_stats)
-    
-    for elim in replay.eliminations:
-        print(elim)
-```
+## Credits
 
-## :warning: More info
-Please see [Fortnite Replay Decompressor](https://github.com/Shiqan/FortniteReplayDecompressor) for more details.
+Credits to [https://github.com/Shiqan](Shiqan) for various protocol documentation and developing the original Python implementation. This library is a fork of [https://github.com/Shiqan/fortnite-replay-reader](that project).
 
-## License
-
-Licensed under the [MIT License](LICENSE).
+Credits to [https://github.com/xNocken](xNocken) whose Node library proved to be a great reference in getting started with updating this project.
