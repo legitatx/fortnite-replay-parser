@@ -124,7 +124,7 @@ class EFortBuildingState(Enum):
     EFortBuildingState_MAX = 4
 
 
-class EFortGameplayState(enum.Enum):
+class EFortGameplayState(Enum):
     NORMAL_GAMEPLAY = 0
     WAITING_TO_START = 1
     END_OF_ZONE = 2
@@ -135,7 +135,7 @@ class EFortGameplayState(enum.Enum):
     EFortGameplayState_MAX = 7
 
 
-class EFortMovementStyle(enum.Enum):
+class EFortMovementStyle(Enum):
     RUNNING = 0
     WALKING = 1
     CHARGING = 2
@@ -148,7 +148,7 @@ class EFortMovementStyle(enum.Enum):
     EFortMovementStyle_MAX = 9
 
 
-class EFortPickupTossState(enum.Enum):
+class EFortPickupTossState(Enum):
     NOT_TOSSED = 0
     IN_PROGRESS = 1
     AT_REST = 2
@@ -156,7 +156,7 @@ class EFortPickupTossState(enum.Enum):
     EFortPickupTossState_MAX = 4
 
 
-class EFortWeaponType(enum.Enum):
+class EFortWeaponType(Enum):
     NONE = 0
     RANGED_ANY = 1
     PISTOL = 2
@@ -176,7 +176,7 @@ class EFortWeaponType(enum.Enum):
     MAX = 16
 
 
-class ENetRole(enum.Enum):
+class ENetRole(Enum):
     ROLE_NONE = 0
     ROLE_SIMULATED_PROXY = 1
     ROLE_AUTONOMOUS_PROXY = 2
@@ -185,7 +185,7 @@ class ENetRole(enum.Enum):
     ROLE_MAX = 5
 
 
-class EServerStability(enum.Enum):
+class EServerStability(Enum):
     STABLE = 0
     LOW_INSTABILITY = 1
     HIGH_INSTABILITY = 2

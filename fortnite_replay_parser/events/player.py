@@ -1,16 +1,16 @@
 from exceptions import PlayerEliminationException
 from models.events import PlayerEliminationEvent
 from models.reader import Header
-from models.enums.fortnite import EFortWeaponType
+from models.fortnite import EFortWeaponType
 
 
 def get_player_name(buffer):
     player_type = buffer.read_byte()
     if player_type == 0x03:
         return "Bot"
-    elif player_type == 0x16:
+    elif player_type == 0x10:
         return buffer.read_string()
-    elif player_type == 0x17:
+    elif player_type == 0x11:
         buffer.skip_bytes(1)
         return buffer.read_guid()
     else:

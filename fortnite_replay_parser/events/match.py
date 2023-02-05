@@ -1,7 +1,7 @@
-from models.events import MatchStatsEventExport, TeamStatsEventExport
+from models.events import MatchStatsEvent, TeamStatsEvent
 
 
-def read_match_stats_buffer(event: MatchStatsEventExport, buffer):
+def read_match_stats_buffer(event: MatchStatsEvent, buffer):
     buffer.skip_bytes(4)
     event.accuracy = int(buffer.read_float32())
     event.assists = buffer.read_uint32()
@@ -17,7 +17,7 @@ def read_match_stats_buffer(event: MatchStatsEventExport, buffer):
     event.damage_to_players = event.other_damage + event.weapon_damage
 
 
-def read_team_stats_buffer(event: TeamStatsEventExport, buffer):
+def read_team_stats_buffer(event: TeamStatsEvent, buffer):
     buffer.skip_bytes(4)
     event.placement = buffer.read_uint32()
     event.totalPlayers = buffer.read_uint32()

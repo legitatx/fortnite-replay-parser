@@ -1,6 +1,6 @@
 from events.match import read_match_stats_buffer, read_team_stats_buffer
 from events.player import read_elimination_buffer
-from models.enums.fortnite import EventTypes
+from models.fortnite import EventTypes
 from models.events import *
 from logger import logger
 
