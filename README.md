@@ -1,6 +1,12 @@
 # Fortnite Replay Parser
 
+[![PyPI](https://img.shields.io/pypi/v/fortnite-replay-parser.svg)](https://pypi.org/project/fortnite-replay-parser/)
+
 Minimal Python library intended to parse events in Fortnite replay files from Chapter 4 Season 1 with backwards compatibility for earlier versions.
+
+## Installation
+
+`pip install fortnite-replay-parser`
 
 ## Example Usage
 
