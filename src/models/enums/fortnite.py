@@ -1,13 +1,7 @@
-import enum
+from enum import Enum
 
 
-class PlayerTypes(enum.Enum):
-    NAMELESS_BOT = 0x03
-    NAMED_BOT = 0x10
-    PLAYER = 0x11
-
-
-class EventTypes(enum.Enum):
+class EventTypes(Enum):
     PLAYER_ELIMINATION = "playerElim"
     MATCH_STATS = "AthenaMatchStats"
     TEAM_STATS = "AthenaMatchTeamStats"
@@ -17,7 +11,7 @@ class EventTypes(enum.Enum):
     BATTLE_BUS = "BattleBusFlight"
 
 
-class BuildTargetType(enum.Enum):
+class BuildTargetType(Enum):
     UNKNOWN = 0
     GAME = 1
     SERVER = 2
@@ -26,7 +20,7 @@ class BuildTargetType(enum.Enum):
     PROGRAM = 5
 
 
-class EAlertLevel(enum.Enum):
+class EAlertLevel(Enum):
     UNAWARE = 0
     ALERTED = 1
     LKP = 2
@@ -35,7 +29,7 @@ class EAlertLevel(enum.Enum):
     EAlertLevel_MAX = 5
 
 
-class EAthenaGamePhase(enum.Enum):
+class EAthenaGamePhase(Enum):
     NONE = 0
     SETUP = 1
     WARMUP = 2
@@ -46,7 +40,7 @@ class EAthenaGamePhase(enum.Enum):
     EAthenaGamePhase_MAX = 7
 
 
-class EAthenaStormCapState(enum.Enum):
+class EAthenaStormCapState(Enum):
     NONE = 0
     CLEAR = 1
     WARNING = 2
@@ -55,7 +49,7 @@ class EAthenaStormCapState(enum.Enum):
     EAthenaStormCapState_MAX = 5
 
 
-class EDeathCause(enum.Enum):
+class EDeathCause(Enum):
     OUTSIDE_SAFE_ZONE = 0
     FALL_DAMAGE = 1
     PISTOL = 2
@@ -111,7 +105,7 @@ class EDeathCause(enum.Enum):
     EDeathCause_MAX = 52
 
 
-class EEventTournamentRound(enum.Enum):
+class EEventTournamentRound(Enum):
     OPEN = 0
     QUALIFIERS = 1
     SEMI_FINALS = 2
@@ -122,7 +116,7 @@ class EEventTournamentRound(enum.Enum):
     EEventTournamentRound_MAX = 7
 
 
-class EFortBuildingState(enum.Enum):
+class EFortBuildingState(Enum):
     PLACEMENT = 0
     EDIT_MODE = 1
     NONE = 2
@@ -197,4 +191,3 @@ class EServerStability(enum.Enum):
     HIGH_INSTABILITY = 2
     COUNT = 3
     EServerStability_MAX = 4
-

@@ -1,59 +1,41 @@
 from datetime import datetime
-from typing import Dict, List, Optional, Union
-from pydantic import BaseModel
+from typing import Union
+from pydantic.dataclasses import dataclass
 
-from src.models.fortnite import FVector, Player, SafeZone
-
-
-class PlayerEliminationEvent(BaseModel):
-    eliminated: str
-    eliminator: str
-    gun_type: Union[str, int]
-    knocked: bool
-
-
-class MatchStatsEventExport(BaseModel):
-    accuracy: int
-    assists: int
-    eliminations: int
-    weaponDamage: int
-    otherDamage: int
-    revives: int
-    damageTaken: int
-    damageToStructures: int
-    materialsGathered: int
-    materialsUsed: int
-    totalTraveled: int
-    damageToPlayers: int
+@dataclass
+class Event:
+    event_id: str
+    group: str
+    metadata: str
+    start_time: int
+    end_time: int
 
 
-class TeamStatsEventExport(MatchStatsEventExport):
-    placement: int
-    totalPlayers: int
+@dataclass
+class PlayerEliminationEvent(Event):
+    eliminated: str = None
+    eliminator: str = None
+    gun_type: Union[str, int] = None
+    knocked: bool = None
 
 
-class MatchStatsEvent(TeamStatsEventExport):
-    pass
+@dataclass
+class MatchStatsEvent(Event):
+    accuracy: int = None
+    assists: int = None
+    eliminations: int = None
+    weaponDamage: int = None
+    otherDamage: int = None
+    revives: int = None
+    damageTaken: int = None
+    damageToStructures: int = None
+    materialsGathered: int = None
+    materialsUsed: int = None
+    totalTraveled: int = None
+    damageToPlayers: int = None
 
 
-class GFPEvent(BaseModel):
-    moduleId: str
-    moduleVersion: Optional[float]
-    artifactId: Optional[str]
-
-
-class Events:
-    chests: List[FVector]
-    safeZones: List[SafeZone]
-    players: List[Player]
-    matchStats: MatchStatsEvent
-    gfp: List[GFPEvent]
-
-
-class GlobalDataEvents:
-    chests: List[FVector]
-    safeZones: List[SafeZone]
-    players: Dict[str, Player]
-    matchStats: Optional[MatchStatsEvent]
-    gfp: Optional[List[GFPEvent]]
-    timecode: Optional[datetime]
+@dataclass
+class TeamStatsEvent(MatchStatsEvent):
+    placement: int = None
+    totalPlayers: int = None

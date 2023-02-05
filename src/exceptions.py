@@ -16,6 +16,13 @@ class ReadByteStringException(ReaderException):
         super().__init__(detail)
 
 
-class PlayerEliminationException(ReaderException):
-    def __init__(self, detail: str = "Failed to parse elimination event."):
+class EventParseException(ReaderException):
+    def __init__(self, detail: str = "Failed to parse replay event."):
+        super().__init__(detail)
+
+
+class PlayerEliminationException(EventParseException):
+    def __init__(
+        self, detail: str = "Failed to parse player elimination event."
+    ):
         super().__init__(detail)
