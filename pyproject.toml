@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "fortnite-replay-parser"
+version = "0.1.0"
+description = "Minimal library intended to parse events in Fortnite replay files."
+authors = ["legitatx"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "fortnite_replay_parser"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pydantic = "^1.10.4"
+bitstring = "^4.0.1"
+pycryptodome = "^3.17"
+
+
+[tool.poetry.group.dev.dependencies]
+pylint = "*"
+autopep8 = "*"
+rope = "*"
+pytest = "*"
+python-coveralls = "*"
+pytest-cov = "==2.5.1"
+pyyaml = ">=4.2b1"
+black = "*"
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
